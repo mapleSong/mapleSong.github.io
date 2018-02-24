@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Asimov&#39;s Blog">
 <meta property="og:description" content="Gulp.js 是基于 Node.js 构建的,利用 Node.js 流的威力,可以快速构建项目。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-02-24T09:16:50.000Z">
+<meta property="og:updated_time" content="2018-02-24T09:24:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Gulp自动化构建工具">
 <meta name="twitter:description" content="Gulp.js 是基于 Node.js 构建的,利用 Node.js 流的威力,可以快速构建项目。">
@@ -185,12 +185,12 @@
       
         <p>Gulp.js 是基于 Node.js 构建的,利用 Node.js 流的威力,可以快速构建项目。</p>
 <a id="more"></a>
-<h2 id="Gulp介绍"><a href="#Gulp介绍" class="headerlink" title="Gulp介绍"></a>Gulp介绍</h2><p>​    Gulp.js 是一个自动化构建工具,开发者可以使用它在项目开发过程中自动执行常见任务。</p>
+<h2 id="Gulp介绍"><a href="#Gulp介绍" class="headerlink" title="Gulp介绍"></a>Gulp介绍</h2><p>Gulp.js 是一个自动化构建工具,开发者可以使用它在项目开发过程中自动执行常见任务。</p>
 <h2 id="Gulp安装"><a href="#Gulp安装" class="headerlink" title="Gulp安装"></a>Gulp安装</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install -g gulp   <span class="comment">// 全局安装gulp</span></div><div class="line">$ gulp -v 				     <span class="comment">// 查看gulp版本号，是否安装成功</span></div><div class="line">$ npm init 				     <span class="comment">// 创建文件夹，初始化npm(项目名称不能为gulp)</span></div><div class="line">$ npm install gulp —save-dev <span class="comment">// 当前文件夹安装本地gulp文件</span></div></pre></td></tr></table></figure>
-<p>​    上述命令执行完成后需要再创建一个gulpfile.js文件来用来配置gulp。</p>
-<h2 id="Gulp使用"><a href="#Gulp使用" class="headerlink" title="Gulp使用"></a>Gulp使用</h2><p>​    我使用gulp最常用的功能就是压缩css,js代码和添加css代码中兼容浏览器前缀。这三个功能分别需要安装三个gulp插件：gulp-uglify（压缩js代码）、gulp-css（压缩css代码）、gulp-autoprefixer（css兼容浏览器前缀）。所以需要通过npm来安装这三个插件：</p>
+<p>上述命令执行完成后需要再创建一个gulpfile.js文件来用来配置gulp。</p>
+<h2 id="Gulp使用"><a href="#Gulp使用" class="headerlink" title="Gulp使用"></a>Gulp使用</h2><p>我使用gulp最常用的功能就是压缩css,js代码和添加css代码中兼容浏览器前缀。这三个功能分别需要安装三个gulp插件：gulp-uglify（压缩js代码）、gulp-css（压缩css代码）、gulp-autoprefixer（css兼容浏览器前缀）。所以需要通过npm来安装这三个插件：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$npm install gulp-uglify --save-dev</div><div class="line">$npm install gulp-css --save-dev</div><div class="line">$npm install gulp-autoprefixer --save-dev</div></pre></td></tr></table></figure>
-<p>​    在项目中我们需要存放我们需要压缩的代码，在项目中创建一个src文件夹，其中存放js，css文件。</p>
+<p>在项目中我们需要存放我们需要压缩的代码，在项目中创建一个src文件夹，其中存放js，css文件。</p>
 <p>​    |——src</p>
 <p>​        |——-js</p>
 <p>​             ——main.js</p>
