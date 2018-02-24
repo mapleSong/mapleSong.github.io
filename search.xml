@@ -40,9 +40,9 @@
     <entry>
       <title><![CDATA[Gulp自动化构建工具]]></title>
       <url>/2017/06/07/gulp%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/</url>
-      <content type="html"><![CDATA[<p>Gulp.js 是基于 Node.js 构建的,利用 Node.js 流的威力,可以快速构建项目。</p>
+      <content type="html"><![CDATA[<p>Gulp.js 是基于 Node.js 构建的,利用 Node.js 流的威力,可以快速构建项目，</p>
+<p>是一个自动化构建工具,开发者可以使用它在项目开发过程中自动执行常见任务。</p>
 <a id="more"></a>
-<h2 id="Gulp介绍"><a href="#Gulp介绍" class="headerlink" title="Gulp介绍"></a>Gulp介绍</h2><p>Gulp.js 是一个自动化构建工具,开发者可以使用它在项目开发过程中自动执行常见任务。</p>
 <h2 id="Gulp安装"><a href="#Gulp安装" class="headerlink" title="Gulp安装"></a>Gulp安装</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install -g gulp   <span class="comment">// 全局安装gulp</span></div><div class="line">$ gulp -v 				     <span class="comment">// 查看gulp版本号，是否安装成功</span></div><div class="line">$ npm init 				     <span class="comment">// 创建文件夹，初始化npm(项目名称不能为gulp)</span></div><div class="line">$ npm install gulp —save-dev <span class="comment">// 当前文件夹安装本地gulp文件</span></div></pre></td></tr></table></figure>
 <p>上述命令执行完成后需要再创建一个gulpfile.js文件来用来配置gulp。</p>
 <h2 id="Gulp使用"><a href="#Gulp使用" class="headerlink" title="Gulp使用"></a>Gulp使用</h2><p>我使用gulp最常用的功能就是压缩css,js代码和添加css代码中兼容浏览器前缀。这三个功能分别需要安装三个gulp插件：gulp-uglify（压缩js代码）、gulp-css（压缩css代码）、gulp-autoprefixer（css兼容浏览器前缀）。所以需要通过npm来安装这三个插件：</p>
@@ -85,7 +85,7 @@
     <entry>
       <title><![CDATA[JavaScript面向对象]]></title>
       <url>/2017/06/06/JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
-      <content type="html"><![CDATA[<h1 id="JavaScript面向对象"><a href="#JavaScript面向对象" class="headerlink" title="JavaScript面向对象"></a>JavaScript面向对象</h1><p>new一个对象出来：）</p>
+      <content type="html"><![CDATA[<p>new一个对象出来：）</p>
 <a id="more"></a>
 <h3 id="理解对象"><a href="#理解对象" class="headerlink" title="理解对象"></a>理解对象</h3><p>创建一个实例，为它添加属性和方法，如下代码：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>(); </div><div class="line">person.name = <span class="string">"Nicholas"</span>; </div><div class="line">person.age = <span class="number">29</span>; </div><div class="line">person.job = <span class="string">"Software Engineer"</span>;</div><div class="line"></div><div class="line">person.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">alert(<span class="keyword">this</span>.name); </div><div class="line">&#125;;</div></pre></td></tr></table></figure>
@@ -116,7 +116,7 @@
     <entry>
       <title><![CDATA[Git使用]]></title>
       <url>/2017/06/05/Git%E4%BD%BF%E7%94%A8/</url>
-      <content type="html"><![CDATA[<h1 id="Git的正确打开方式"><a href="#Git的正确打开方式" class="headerlink" title="Git的正确打开方式"></a>Git的正确打开方式</h1><p>Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。</p>
+      <content type="html"><![CDATA[<p>Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。</p>
 <a id="more"></a>
 <h4 id="Git三个状态"><a href="#Git三个状态" class="headerlink" title="Git三个状态"></a>Git三个状态</h4><p>在Git中存在三个状态：工作区、暂存区、版本状态仓库。</p>
 <p>工作区：工作区是我们在本地我们可以看得到的那一部分内容。例如在本地创建的文件夹里的文件，如果修改了文件中的内容可以通过 git status来查看是否文件有修改。</p>
@@ -165,7 +165,7 @@
     <entry>
       <title><![CDATA[JavaScript闭包]]></title>
       <url>/2017/04/12/JavaScript%E9%97%AD%E5%8C%85/</url>
-      <content type="html"><![CDATA[<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>闭包算是JavaScript经常会碰到的问题。简单的说就是函数嵌套关系到作用域链的问题。</p>
+      <content type="html"><![CDATA[<p>闭包算是JavaScript经常会碰到的问题。简单的说就是函数嵌套关系到作用域链的问题。</p>
 <a id="more"></a>
 <p>学习了一下阮一峰大神的闭包讲解，概括起来就是变量作用域，全局和局部变量的判断。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　　<span class="keyword">var</span> n=<span class="number">999</span>;</div><div class="line">　　　　<span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　　　　alert(n); </div><div class="line">　　　　&#125;</div><div class="line">　　　　<span class="keyword">return</span> f2;</div><div class="line">　　&#125;</div><div class="line">　　<span class="keyword">var</span> result=f1();</div><div class="line">　　result(); <span class="comment">// 999</span></div></pre></td></tr></table></figure>
