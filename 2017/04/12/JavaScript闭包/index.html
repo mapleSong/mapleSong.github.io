@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>JavaScript闭包 | Asimov&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="闭包闭包算是JavaScript经常会碰到的问题。简单的说就是函数嵌套关系到作用域链的问题。 学习了一下阮一峰的闭包讲解，概括起来就是变量作用域，全局和局部变量的判断。 123456789function f1()&amp;#123;　　　　var n=999;　　　　function f2()&amp;#123;　　　　　　alert(n); 　　　　&amp;#125;　　　　return f2;　　&amp;#125;">
+  <meta name="description" content="闭包​    闭包算是JavaScript经常会碰到的问题。简单的说就是函数嵌套关系到作用域链的问题。">
 <meta name="keywords" content="前端,JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript闭包">
 <meta property="og:url" content="http://yoursite.com/2017/04/12/JavaScript闭包/index.html">
 <meta property="og:site_name" content="Asimov&#39;s Blog">
-<meta property="og:description" content="闭包闭包算是JavaScript经常会碰到的问题。简单的说就是函数嵌套关系到作用域链的问题。 学习了一下阮一峰的闭包讲解，概括起来就是变量作用域，全局和局部变量的判断。 123456789function f1()&amp;#123;　　　　var n=999;　　　　function f2()&amp;#123;　　　　　　alert(n); 　　　　&amp;#125;　　　　return f2;　　&amp;#125;">
+<meta property="og:description" content="闭包​    闭包算是JavaScript经常会碰到的问题。简单的说就是函数嵌套关系到作用域链的问题。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-25T08:01:56.000Z">
+<meta property="og:updated_time" content="2018-02-24T09:17:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript闭包">
-<meta name="twitter:description" content="闭包闭包算是JavaScript经常会碰到的问题。简单的说就是函数嵌套关系到作用域链的问题。 学习了一下阮一峰的闭包讲解，概括起来就是变量作用域，全局和局部变量的判断。 123456789function f1()&amp;#123;　　　　var n=999;　　　　function f2()&amp;#123;　　　　　　alert(n); 　　　　&amp;#125;　　　　return f2;　　&amp;#125;">
+<meta name="twitter:description" content="闭包​    闭包算是JavaScript经常会碰到的问题。简单的说就是函数嵌套关系到作用域链的问题。">
   
     <link rel="alternative" href="/atom.xml" title="Asimov&#39;s Blog" type="application/atom+xml">
   
@@ -183,8 +183,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>闭包算是JavaScript经常会碰到的问题。简单的说就是函数嵌套关系到作用域链的问题。</p>
-<p>学习了一下阮一峰的闭包讲解，概括起来就是变量作用域，全局和局部变量的判断。</p>
+        <h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>​    闭包算是JavaScript经常会碰到的问题。简单的说就是函数嵌套关系到作用域链的问题。</p>
+<a id="more"></a>
+<p>​    学习了一下阮一峰的闭包讲解，概括起来就是变量作用域，全局和局部变量的判断。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　　<span class="keyword">var</span> n=<span class="number">999</span>;</div><div class="line">　　　　<span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　　　　alert(n); </div><div class="line">　　　　&#125;</div><div class="line">　　　　<span class="keyword">return</span> f2;</div><div class="line">　　&#125;</div><div class="line">　　<span class="keyword">var</span> result=f1();</div><div class="line">　　result(); <span class="comment">// 999</span></div></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">　　<span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　　<span class="keyword">var</span> n=<span class="number">999</span>;</div><div class="line">　　　　nAdd=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;n+=<span class="number">1</span>&#125;</div><div class="line">　　　　<span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　　　　alert(n);</div><div class="line">　　　　&#125;</div><div class="line">　　　　<span class="keyword">return</span> f2;</div><div class="line">　　&#125;</div><div class="line">　　<span class="keyword">var</span> result=f1();</div><div class="line">　　result(); <span class="comment">// 999</span></div><div class="line">　　nAdd();</div><div class="line">　　result(); <span class="comment">// 1000</span></div></pre></td></tr></table></figure>
 <p>在这段代码中，result实际上就是闭包f2函数。它一共运行了两次，第一次的值是999，第二次的值是1000。这证明了，函数f1中的局部变量n一直保存在内存中，并没有在f1调用后被自动清除。所以在闭包中内存中会一直保存着局部变量。会占用内存，内存消耗大，对整体性能有影响。</p>
