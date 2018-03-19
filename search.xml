@@ -3,6 +3,51 @@
   
     
     <entry>
+      <title><![CDATA[小程序框架WePY]]></title>
+      <url>/2018/02/27/%20%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%A1%86%E6%9E%B6WePY/</url>
+      <content type="html"><![CDATA[<p>原生小程序的结构和组件化实在是不喜欢，鹅厂自家的WePY框架借鉴了Vue.js的语法风格和功能特性写起来到是方便很多。</p>
+<a id="more"></a>
+<h3 id="WePY项目创建"><a href="#WePY项目创建" class="headerlink" title="WePY项目创建"></a>WePY项目创建</h3><p>全局安装或更新WePY命令行工具</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install wepy-cli -g</div></pre></td></tr></table></figure>
+<p>在开发目录中生成Demo开发项目</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">wepy new myproject</div><div class="line"># 1.7.0之后的版本使用 wepy init standard myproject 初始化项目，使用 wepy list 查看项目模板</div></pre></td></tr></table></figure>
+<p>切换至项目目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd myproject</div><div class="line">npm istall</div></pre></td></tr></table></figure>
+<p>开启实时编译</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">wepy build —watch</div><div class="line">|** 报错的话看是否是eslint问题  wepy.config.js -&gt; eslint: false,</div></pre></td></tr></table></figure>
+<h4 id="需要注意几点"><a href="#需要注意几点" class="headerlink" title="需要注意几点"></a>需要注意几点</h4><p>1.使用<strong>微信开发者工具</strong>–&gt;<strong>添加项目</strong>，<strong>项目目录</strong>请选择<strong>dist</strong>目录。</p>
+<p>2.<strong>微信开发者工具</strong>–&gt;<strong>项目</strong>–&gt;<strong>关闭ES6转ES5</strong>。</p>
+<p>3.<strong>微信开发者工具</strong>–&gt;<strong>项目</strong>–&gt;<strong>关闭上传代码时样式自动补全。</strong></p>
+<p>4.<strong>微信开发者工具</strong>–&gt;<strong>项目</strong>–&gt;<strong>关闭代码压缩上传</strong>。</p>
+<p>小程序设置更改后如出现 编译.wxml文件错误重启软件即可</p>
+<h3 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h3><p>小程序入口、页面、组件文件名的后缀为<code>.wpy</code></p>
+<p>可以使用ES6、promise开发</p>
+<p>事件绑定语法使用优化语法代替：</p>
+<ul>
+<li>原 <code>bindtap=&quot;click&quot;</code> 替换为 <code>@tap=&quot;click&quot;</code>，原<code>catchtap=&quot;click&quot;</code>替换为<code>@tap.stop=&quot;click&quot;</code>。</li>
+<li>原 <code>capture-bind:tap=&quot;click&quot;</code> 替换为 <code>@tap.capture=&quot;click&quot;</code>，原<code>capture-catch:tap=&quot;click&quot;</code>替换为<code>@tap.capture.stop=&quot;click&quot;</code>。。</li>
+</ul>
+<h3 id="数据绑定方式"><a href="#数据绑定方式" class="headerlink" title="数据绑定方式"></a>数据绑定方式</h3><p>WePY使用脏数据检查对setData进行封装，在函数运行周期结束时执行脏数据检查，一来可以不用关心页面多次setData是否会有性能上的问题，二来可以更加简洁去修改数据实现绑定，不用重复去写setData方法。代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.title = <span class="string">'this is title'</span>;</div></pre></td></tr></table></figure>
+<p>在我写项目时需要滑动触底刷新，当时用的定时器做数据获取模拟就出现了bug，这时</p>
+<p><strong>需注意的是，在异步函数中更新数据的时，必须手动调用<code>$apply</code>方法，才会触发脏数据检查流程的运行</strong>。如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">setTimeout(() =&gt; &#123;</div><div class="line">    this.title = &apos;this is title&apos;;</div><div class="line">    this.$apply();</div><div class="line">&#125;, 3000);</div></pre></td></tr></table></figure>
+<h3 id="请求数据"><a href="#请求数据" class="headerlink" title="请求数据"></a>请求数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">wepy.request(&#123;</div><div class="line">      url: &quot;###&quot;,</div><div class="line">      method: &quot;GET&quot;,</div><div class="line">      header: &#123;header&#125;,</div><div class="line">      success: function(res) &#123;</div><div class="line">        </div><div class="line">      &#125;</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
+<h3 id="Component组件实例"><a href="#Component组件实例" class="headerlink" title="Component组件实例"></a>Component组件实例</h3><p>对于WePY中的methods属性，因为与Vue中的使用习惯不一致，非常容易造成误解，这里需要特别强调一下：WePY中的methods属性只能声明页面wxml标签的bind、catch事件，不能声明自定义方法，这与Vue中的用法是不一致的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">// 错误示例</div><div class="line"></div><div class="line">import wepy from &apos;wepy&apos;;</div><div class="line"></div><div class="line">export default class MyComponent extends wepy.component &#123;</div><div class="line">    methods = &#123;</div><div class="line">        bindtap () &#123;</div><div class="line">            let rst = this.commonFunc();</div><div class="line">            // doSomething</div><div class="line">        &#125;,</div><div class="line"></div><div class="line">        bindinput () &#123;</div><div class="line">            let rst = this.commonFunc();</div><div class="line">            // doSomething</div><div class="line">        &#125;,</div><div class="line"></div><div class="line">        //错误：普通自定义方法不能放在methods对象中</div><div class="line">        customFunction () &#123;</div><div class="line">            return &apos;sth.&apos;;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">// 正确示例</div><div class="line"></div><div class="line">import wepy from &apos;wepy&apos;;</div><div class="line"></div><div class="line">export default class MyComponent extends wepy.component &#123;</div><div class="line">    methods = &#123;</div><div class="line">        bindtap () &#123;</div><div class="line">            let rst = this.commonFunc();</div><div class="line">            // doSomething</div><div class="line">        &#125;,</div><div class="line"></div><div class="line">        bindinput () &#123;</div><div class="line">            let rst = this.commonFunc();</div><div class="line">            // doSomething</div><div class="line">        &#125;,</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    //正确：普通自定义方法在methods对象外声明，与methods平级</div><div class="line">    customFunction () &#123;</div><div class="line">        return &apos;sth.&apos;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>API文档：<a href="https://tencent.github.io/wepy/document.html#/" target="_blank" rel="external">https://tencent.github.io/wepy/document.html#/</a></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 微信小程序 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[2017年终总结]]></title>
       <url>/2018/01/15/2017%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</url>
       <content type="html"><![CDATA[<p>年末断断续续也写了一些觉得有些杂乱，趁着最近不忙还是要把总结完整的写一写。</p>

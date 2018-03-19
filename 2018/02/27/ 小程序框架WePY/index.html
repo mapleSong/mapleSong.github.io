@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>JavaScript面向对象 | Asimov&#39;s Blog</title>
+  <title>小程序框架WePY | Asimov&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="new一个对象出来：）">
-<meta name="keywords" content="javascript，前端">
+  <meta name="description" content="原生小程序的结构和组件化实在是不喜欢，鹅厂自家的WePY框架借鉴了Vue.js的语法风格和功能特性写起来到是方便很多。">
+<meta name="keywords" content="微信小程序">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript面向对象">
-<meta property="og:url" content="http://yoursite.com/2017/06/06/JavaScript面向对象/index.html">
+<meta property="og:title" content="小程序框架WePY">
+<meta property="og:url" content="http://yoursite.com/2018/02/27/ 小程序框架WePY/index.html">
 <meta property="og:site_name" content="Asimov&#39;s Blog">
-<meta property="og:description" content="new一个对象出来：）">
+<meta property="og:description" content="原生小程序的结构和组件化实在是不喜欢，鹅厂自家的WePY框架借鉴了Vue.js的语法风格和功能特性写起来到是方便很多。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://or2e12z3i.bkt.clouddn.com/screenshot2.png">
-<meta property="og:updated_time" content="2018-02-24T09:42:06.000Z">
+<meta property="og:updated_time" content="2018-03-19T08:02:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript面向对象">
-<meta name="twitter:description" content="new一个对象出来：）">
-<meta name="twitter:image" content="http://or2e12z3i.bkt.clouddn.com/screenshot2.png">
+<meta name="twitter:title" content="小程序框架WePY">
+<meta name="twitter:description" content="原生小程序的结构和组件化实在是不喜欢，鹅厂自家的WePY框架借鉴了Vue.js的语法风格和功能特性写起来到是方便很多。">
   
     <link rel="alternative" href="/atom.xml" title="Asimov&#39;s Blog" type="application/atom+xml">
   
@@ -165,37 +163,57 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JavaScript面向对象" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post- 小程序框架WePY" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JavaScript面向对象
+      小程序框架WePY
     </h1>
   
 
         
-        <a href="/2017/06/06/JavaScript面向对象/" class="archive-article-date">
-  	<time datetime="2017-06-06T06:47:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-06</time>
+        <a href="/2018/02/27/ 小程序框架WePY/" class="archive-article-date">
+  	<time datetime="2018-02-27T08:42:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>new一个对象出来：）</p>
+        <p>原生小程序的结构和组件化实在是不喜欢，鹅厂自家的WePY框架借鉴了Vue.js的语法风格和功能特性写起来到是方便很多。</p>
 <a id="more"></a>
-<h3 id="理解对象"><a href="#理解对象" class="headerlink" title="理解对象"></a>理解对象</h3><p>创建一个实例，为它添加属性和方法，如下代码：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>(); </div><div class="line">person.name = <span class="string">"Nicholas"</span>; </div><div class="line">person.age = <span class="number">29</span>; </div><div class="line">person.job = <span class="string">"Software Engineer"</span>;</div><div class="line"></div><div class="line">person.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">alert(<span class="keyword">this</span>.name); </div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<p>上面的例子中名为person就是一个对象，其中有三个属性name、age、job和一个方法sayName()。</p>
-<h1 id="设计原型"><a href="#设计原型" class="headerlink" title="设计原型"></a>设计原型</h1><h4 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123; &#125;</div><div class="line"></div><div class="line">Person.prototype.name = <span class="string">"Nicholas"</span>; </div><div class="line">Person.prototype.age = <span class="number">29</span>; </div><div class="line">Person.prototype.job = <span class="string">"Software Engineer"</span>; </div><div class="line">Person.prototype.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	alert(<span class="keyword">this</span>.name); </div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> person1 = <span class="keyword">new</span> Person(); </div><div class="line">person1.sayName(); <span class="comment">//"Nicholas"</span></div><div class="line"><span class="keyword">var</span> person2 = <span class="keyword">new</span> Person();</div><div class="line">person2.sayName(); <span class="comment">//"Nicholas" </span></div><div class="line">alert(person1.sayName == person2.sayName);<span class="comment">//true</span></div></pre></td></tr></table></figure>
-<p>无论什么时候，只要创建了一个新函数，就会根据一组特定的规则为该函数创建一个 prototype 属性，这个属性指向函数的原型对象。在默认情况下，所有原型对象都会自动获得一个 constructor （构造函数）属性，这个属性包含一个指向 prototype 属性所在函数的指针。就拿前面的例子来说， Person.prototype. constructor 指向 Person。而通过这个构造函数，我们还可继续为原型对象 添加其他属性和方法。</p>
-<p>创建了自定义的构造函数之后，其原型对象默认只会取得 constructor 属性；至于其他方法，则 都是从 Object 继承而来的。当调用构造函数创建一个新实例后，该实例的内部将包含一个指针（内部 属性），指向构造函数的原型对象。ECMA-262 第 5 版中管这个指针叫[[Prototype]]。虽然在脚本中 没有标准的方式访问 [[Prototype]] ， 但 Firefox、Safari 和 Chrome 在每个对象上都支持一个属性 <strong>proto</strong>；而在其他实现中，这个属性对脚本则是完全不可见的。不过，要明确的真正重要的一点就 是，这个连接存在于实例与构造函数的原型对象之间，而不是存在于实例与构造函数之间。</p>
-<p>以前面使用 Person 构造函数和 Person.prototype 创建实例的代码为例，下图展示了各个对 象之间的关系。</p>
-<p><img src="http://or2e12z3i.bkt.clouddn.com/screenshot2.png" alt=""></p>
-<h4 id="更简单、实用的原型语法"><a href="#更简单、实用的原型语法" class="headerlink" title="更简单、实用的原型语法"></a>更简单、实用的原型语法</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123; &#125;</div><div class="line"></div><div class="line">Person.prototype = &#123;</div><div class="line">  <span class="keyword">constructor</span>:Person, //指向所在函数指针</div><div class="line">  name : "Nicholas", </div><div class="line">  age : 29, job: "Software Engineer", </div><div class="line">  sayName : function () &#123;</div><div class="line">	alert(<span class="keyword">this</span>.name); </div><div class="line">  &#125; </div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> friend = <span class="keyword">new</span> Person();</div><div class="line"></div><div class="line">alert(friend <span class="keyword">instanceof</span> <span class="built_in">Object</span>); <span class="comment">//true</span></div><div class="line">alert(friend <span class="keyword">instanceof</span> Person); <span class="comment">//true</span></div><div class="line">alert(friend.constructor == Person); <span class="comment">//true</span></div><div class="line">alert(friend.constructor == <span class="built_in">Object</span>);<span class="comment">//true</span></div></pre></td></tr></table></figure>
+<h3 id="WePY项目创建"><a href="#WePY项目创建" class="headerlink" title="WePY项目创建"></a>WePY项目创建</h3><p>全局安装或更新WePY命令行工具</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install wepy-cli -g</div></pre></td></tr></table></figure>
+<p>在开发目录中生成Demo开发项目</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">wepy new myproject</div><div class="line"># 1.7.0之后的版本使用 wepy init standard myproject 初始化项目，使用 wepy list 查看项目模板</div></pre></td></tr></table></figure>
+<p>切换至项目目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd myproject</div><div class="line">npm istall</div></pre></td></tr></table></figure>
+<p>开启实时编译</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">wepy build —watch</div><div class="line">|** 报错的话看是否是eslint问题  wepy.config.js -&gt; eslint: false,</div></pre></td></tr></table></figure>
+<h4 id="需要注意几点"><a href="#需要注意几点" class="headerlink" title="需要注意几点"></a>需要注意几点</h4><p>1.使用<strong>微信开发者工具</strong>–&gt;<strong>添加项目</strong>，<strong>项目目录</strong>请选择<strong>dist</strong>目录。</p>
+<p>2.<strong>微信开发者工具</strong>–&gt;<strong>项目</strong>–&gt;<strong>关闭ES6转ES5</strong>。</p>
+<p>3.<strong>微信开发者工具</strong>–&gt;<strong>项目</strong>–&gt;<strong>关闭上传代码时样式自动补全。</strong></p>
+<p>4.<strong>微信开发者工具</strong>–&gt;<strong>项目</strong>–&gt;<strong>关闭代码压缩上传</strong>。</p>
+<p>小程序设置更改后如出现 编译.wxml文件错误重启软件即可</p>
+<h3 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h3><p>小程序入口、页面、组件文件名的后缀为<code>.wpy</code></p>
+<p>可以使用ES6、promise开发</p>
+<p>事件绑定语法使用优化语法代替：</p>
+<ul>
+<li>原 <code>bindtap=&quot;click&quot;</code> 替换为 <code>@tap=&quot;click&quot;</code>，原<code>catchtap=&quot;click&quot;</code>替换为<code>@tap.stop=&quot;click&quot;</code>。</li>
+<li>原 <code>capture-bind:tap=&quot;click&quot;</code> 替换为 <code>@tap.capture=&quot;click&quot;</code>，原<code>capture-catch:tap=&quot;click&quot;</code>替换为<code>@tap.capture.stop=&quot;click&quot;</code>。。</li>
+</ul>
+<h3 id="数据绑定方式"><a href="#数据绑定方式" class="headerlink" title="数据绑定方式"></a>数据绑定方式</h3><p>WePY使用脏数据检查对setData进行封装，在函数运行周期结束时执行脏数据检查，一来可以不用关心页面多次setData是否会有性能上的问题，二来可以更加简洁去修改数据实现绑定，不用重复去写setData方法。代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.title = <span class="string">'this is title'</span>;</div></pre></td></tr></table></figure>
+<p>在我写项目时需要滑动触底刷新，当时用的定时器做数据获取模拟就出现了bug，这时</p>
+<p><strong>需注意的是，在异步函数中更新数据的时，必须手动调用<code>$apply</code>方法，才会触发脏数据检查流程的运行</strong>。如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">setTimeout(() =&gt; &#123;</div><div class="line">    this.title = &apos;this is title&apos;;</div><div class="line">    this.$apply();</div><div class="line">&#125;, 3000);</div></pre></td></tr></table></figure>
+<h3 id="请求数据"><a href="#请求数据" class="headerlink" title="请求数据"></a>请求数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">wepy.request(&#123;</div><div class="line">      url: &quot;###&quot;,</div><div class="line">      method: &quot;GET&quot;,</div><div class="line">      header: &#123;header&#125;,</div><div class="line">      success: function(res) &#123;</div><div class="line">        </div><div class="line">      &#125;</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
+<h3 id="Component组件实例"><a href="#Component组件实例" class="headerlink" title="Component组件实例"></a>Component组件实例</h3><p>对于WePY中的methods属性，因为与Vue中的使用习惯不一致，非常容易造成误解，这里需要特别强调一下：WePY中的methods属性只能声明页面wxml标签的bind、catch事件，不能声明自定义方法，这与Vue中的用法是不一致的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">// 错误示例</div><div class="line"></div><div class="line">import wepy from &apos;wepy&apos;;</div><div class="line"></div><div class="line">export default class MyComponent extends wepy.component &#123;</div><div class="line">    methods = &#123;</div><div class="line">        bindtap () &#123;</div><div class="line">            let rst = this.commonFunc();</div><div class="line">            // doSomething</div><div class="line">        &#125;,</div><div class="line"></div><div class="line">        bindinput () &#123;</div><div class="line">            let rst = this.commonFunc();</div><div class="line">            // doSomething</div><div class="line">        &#125;,</div><div class="line"></div><div class="line">        //错误：普通自定义方法不能放在methods对象中</div><div class="line">        customFunction () &#123;</div><div class="line">            return &apos;sth.&apos;;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">// 正确示例</div><div class="line"></div><div class="line">import wepy from &apos;wepy&apos;;</div><div class="line"></div><div class="line">export default class MyComponent extends wepy.component &#123;</div><div class="line">    methods = &#123;</div><div class="line">        bindtap () &#123;</div><div class="line">            let rst = this.commonFunc();</div><div class="line">            // doSomething</div><div class="line">        &#125;,</div><div class="line"></div><div class="line">        bindinput () &#123;</div><div class="line">            let rst = this.commonFunc();</div><div class="line">            // doSomething</div><div class="line">        &#125;,</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    //正确：普通自定义方法在methods对象外声明，与methods平级</div><div class="line">    customFunction () &#123;</div><div class="line">        return &apos;sth.&apos;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>API文档：<a href="https://tencent.github.io/wepy/document.html#/" target="_blank" rel="external">https://tencent.github.io/wepy/document.html#/</a></p>
 
       
 
@@ -209,7 +227,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">javascript，前端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">微信小程序</a>
         		</li>
       		
 		</ul>
@@ -265,7 +283,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2017/06/06/JavaScript面向对象/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/02/27/ 小程序框架WePY/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -279,18 +297,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/06/07/gulp自动化构建工具/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Gulp自动化构建工具
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/06/05/Git使用/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Git使用</div>
+    <a href="/2018/01/15/2017年终总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2017年终总结</div>
       <i class="icon-circle-right"></i>
     </a>
   
