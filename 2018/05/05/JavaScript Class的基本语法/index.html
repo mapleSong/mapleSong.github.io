@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Asimov&#39;s Blog</title>
+  <title>JavaScript Class的基本语法 | Asimov&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Try to find me.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Asimov&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="在ES6中的Class语法，并不是真正的以类为基础(class-base)的新物件导向，根本上还是以原型为基础(prototype-based)，它只是个语法糖。之所以加入Class的目的并不是要建立一个新模型而是为了提供更为简洁的语法来继承。目的就是提供一个让开发者可选择的新语法导向。">
+<meta name="keywords" content="JavaScript,ES6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript Class的基本语法">
+<meta property="og:url" content="http://yoursite.com/2018/05/05/JavaScript Class的基本语法/index.html">
 <meta property="og:site_name" content="Asimov&#39;s Blog">
-<meta property="og:description" content="Try to find me.">
+<meta property="og:description" content="在ES6中的Class语法，并不是真正的以类为基础(class-base)的新物件导向，根本上还是以原型为基础(prototype-based)，它只是个语法糖。之所以加入Class的目的并不是要建立一个新模型而是为了提供更为简洁的语法来继承。目的就是提供一个让开发者可选择的新语法导向。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-08-17T09:20:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Asimov&#39;s Blog">
-<meta name="twitter:description" content="Try to find me.">
+<meta name="twitter:title" content="JavaScript Class的基本语法">
+<meta name="twitter:description" content="在ES6中的Class语法，并不是真正的以类为基础(class-base)的新物件导向，根本上还是以原型为基础(prototype-based)，它只是个语法糖。之所以加入Class的目的并不是要建立一个新模型而是为了提供更为简洁的语法来继承。目的就是提供一个让开发者可选择的新语法导向。">
   
     <link rel="alternative" href="/atom.xml" title="Asimov&#39;s Blog" type="application/atom+xml">
   
@@ -161,92 +163,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-JavaScript代码库(封装)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-JavaScript Class的基本语法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/12/JavaScript代码库(封装)/">JavaScript代码库(封装)</a>
-    </h1>
-  
-
-        
-        <a href="/2018/05/12/JavaScript代码库(封装)/" class="archive-article-date">
-  	<time datetime="2018-05-12T14:12:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>常用工具库，持续更新。。。</p>
-        
-          <a class="article-more-a" href="/2018/05/12/JavaScript代码库(封装)/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/12/JavaScript代码库(封装)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JavaScript Class的基本语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/05/JavaScript Class的基本语法/">JavaScript Class的基本语法</a>
+    <h1 class="article-title" itemprop="name">
+      JavaScript Class的基本语法
     </h1>
   
 
@@ -260,9 +184,20 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>在ES6中的Class语法，并不是真正的以类为基础(class-base)的新物件导向，根本上还是以原型为基础(prototype-based)，它只是个语法糖。之所以加入Class的目的并不是要建立一个新模型而是为了提供更为简洁的语法来继承。目的就是提供一个让开发者可选择的新语法导向。</p>
-        
-          <a class="article-more-a" href="/2018/05/05/JavaScript Class的基本语法/#more">more >></a>
-        
+<a id="more"></a>
+<hr>
+<h3 id="ES6之前"><a href="#ES6之前" class="headerlink" title="ES6之前"></a>ES6之前</h3><p>创建一个造构造函数，然后new实例化这个函数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">shirt</span> (<span class="params">color,size</span>)</span>&#123;</div><div class="line">	<span class="keyword">this</span>.color = color</div><div class="line">    <span class="keyword">this</span>.size = size</div><div class="line">&#125;</div><div class="line">shirt.prototype.pick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">`this shirt color is <span class="subst">$&#123;<span class="keyword">this</span>.color&#125;</span>,size is <span class="subst">$&#123;<span class="keyword">this</span>.size&#125;</span>`</span>)</div><div class="line">&#125;</div><div class="line"><span class="keyword">const</span> shop = <span class="keyword">new</span> shirt(<span class="string">'red'</span>,<span class="string">'xl'</span>)</div><div class="line">shop.pick()</div></pre></td></tr></table></figure>
+<h3 id="Class介绍"><a href="#Class介绍" class="headerlink" title="Class介绍"></a>Class介绍</h3><h4 id="类声明"><a href="#类声明" class="headerlink" title="类声明"></a>类声明</h4><p>定义一个类的一种方法是使用一个<strong>类声明</strong>。要声明一个类，要使用带有<code>class</code>关键字的类名：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Rectangle</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>(height, width) &#123;</div><div class="line">    <span class="keyword">this</span>.height = height;</div><div class="line">    <span class="keyword">this</span>.width = width;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>函数声明</strong>和<strong>类声明</strong>之间的一个重要区别是函数声明会提升，类声明不会。你首先需要声明你的类，然后访问它，否则像下面的代码会抛出一个error。</p>
+<h4 id="用原型和静态方法包装"><a href="#用原型和静态方法包装" class="headerlink" title="用原型和静态方法包装"></a>用原型和静态方法包装</h4><p>类相当于实例的原型， 所有在类中定义的方法， 都会被实例继承。 如果在一个方法前， 加上static关键字， 就表示该方法不会被实例继承， 而是直接通过类来调用， 这就称为“ 静态方法”。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> </span>&#123;</div><div class="line">	<span class="keyword">static</span> classMethod() &#123;</div><div class="line">		<span class="keyword">return</span> <span class="string">'hello'</span>;</div><div class="line">	&#125;</div><div class="line">    classMod()&#123;</div><div class="line">		<span class="keyword">return</span> <span class="string">'hi'</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">Foo.classMethod() <span class="comment">// 'hello'</span></div><div class="line">Foo.classMod() <span class="comment">//"TypeError: Foo.classMod is not a function</span></div><div class="line"><span class="keyword">var</span> foo = <span class="keyword">new</span> Foo();</div><div class="line">foo.classMethod() <span class="comment">// TypeError: foo.classMethod is not a function</span></div><div class="line">foo.classMod() <span class="comment">//'hi'</span></div></pre></td></tr></table></figure>
+<h4 id="使用-extends-创建子类"><a href="#使用-extends-创建子类" class="headerlink" title="使用 extends 创建子类"></a>使用 <code>extends</code> 创建子类</h4><p><code>extends</code>关键字在类声明或类表达式中用于创建一个类作为另一个类的一个子类。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123; </div><div class="line">  <span class="keyword">constructor</span>(name) &#123;</div><div class="line">    <span class="keyword">this</span>.name = name;</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  speak() &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name + <span class="string">' makes a noise.'</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</div><div class="line">  speak() &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name + <span class="string">' barks.'</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> Dog(<span class="string">'Mitzie'</span>);</div><div class="line"><span class="comment">// 'Mitzie barks.'</span></div><div class="line">d.speak();</div></pre></td></tr></table></figure>
+<p>如果子类中存在构造函数，则需要在使用“this”之前首先调用 super() 也可以扩展传统的基于函数的“类”：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Animal</span> (<span class="params">name</span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.name = name;  </div><div class="line">&#125;</div><div class="line">Animal.prototype.speak = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.name + <span class="string">' makes a noise.'</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</div><div class="line">  speak() &#123;</div><div class="line">    <span class="keyword">super</span>.speak();</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name + <span class="string">' barks.'</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> Dog(<span class="string">'Mitzie'</span>);</div><div class="line"><span class="comment">// Mitzie makes a noise.</span></div><div class="line">d.speak();</div></pre></td></tr></table></figure>
+
       
 
       
@@ -288,16 +223,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/05/JavaScript Class的基本语法/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/05/05/JavaScript Class的基本语法/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/05/12/JavaScript代码库(封装)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          JavaScript代码库(封装)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/04/20/JavaScript Await与Async/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript Await与Async</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -317,637 +320,14 @@
 
 
 
-
   
-    <article id="post-JavaScript Await与Async" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/20/JavaScript Await与Async/">JavaScript Await与Async</a>
-    </h1>
   
 
-        
-        <a href="/2018/04/20/JavaScript Await与Async/" class="archive-article-date">
-  	<time datetime="2018-04-20T12:17:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Promise已经很好的解决了回调地域，相对来说也是非常优雅的的选择。那么有没有更好的方案呢？答案就是async/await。async/await应该是目前最简单的异步方案了</p>
-        
-          <a class="article-more-a" href="/2018/04/20/JavaScript Await与Async/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/20/JavaScript Await与Async/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Promise解析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/26/Promise解析/">Promise解析</a>
-    </h1>
   
 
-        
-        <a href="/2018/03/26/Promise解析/" class="archive-article-date">
-  	<time datetime="2018-03-26T03:27:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Promise的产生就是为了解决<strong>回调地域</strong>的问题，当写了很多回调逻辑就很难搞清楚。利用Promise的链式调用就会清晰很多。</p>
-        
-          <a class="article-more-a" href="/2018/03/26/Promise解析/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/26/Promise解析/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post- 小程序框架WePY" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/27/ 小程序框架WePY/">小程序框架WePY</a>
-    </h1>
   
 
-        
-        <a href="/2018/02/27/ 小程序框架WePY/" class="archive-article-date">
-  	<time datetime="2018-02-27T08:42:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>原生小程序的结构和组件化实在是不喜欢，鹅厂自家的WePY框架借鉴了Vue.js的语法风格和功能特性写起来到是方便很多。</p>
-        
-          <a class="article-more-a" href="/2018/02/27/ 小程序框架WePY/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">微信小程序</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/02/27/ 小程序框架WePY/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2017年终总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/15/2017年终总结/">2017年终总结</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/15/2017年终总结/" class="archive-article-date">
-  	<time datetime="2018-01-15T11:00:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>年末断断续续也写了一些觉得有些杂乱，趁着最近不忙还是要把总结完整的写一写。</p>
-        
-          <a class="article-more-a" href="/2018/01/15/2017年终总结/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">个人</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/15/2017年终总结/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-gulp自动化构建工具" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/07/gulp自动化构建工具/">Gulp自动化构建工具</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/07/gulp自动化构建工具/" class="archive-article-date">
-  	<time datetime="2017-06-07T03:20:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Gulp.js 是基于 Node.js 构建的,利用 Node.js 流的威力,可以快速构建项目，</p>
-<p>是一个自动化构建工具,开发者可以使用它在项目开发过程中自动执行常见任务。</p>
-        
-          <a class="article-more-a" href="/2017/06/07/gulp自动化构建工具/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">gulp</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/07/gulp自动化构建工具/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JavaScript面向对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/06/JavaScript面向对象/">JavaScript面向对象</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/06/JavaScript面向对象/" class="archive-article-date">
-  	<time datetime="2017-06-06T06:47:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>new一个对象出来：）</p>
-        
-          <a class="article-more-a" href="/2017/06/06/JavaScript面向对象/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">javascript，前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/06/JavaScript面向对象/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Git使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/05/Git使用/">Git使用</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/05/Git使用/" class="archive-article-date">
-  	<time datetime="2017-06-05T07:59:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。</p>
-        
-          <a class="article-more-a" href="/2017/06/05/Git使用/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/05/Git使用/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JavaScript闭包" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/12/JavaScript闭包/">JavaScript闭包</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/12/JavaScript闭包/" class="archive-article-date">
-  	<time datetime="2017-04-12T05:29:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>闭包算是JavaScript经常会碰到的问题。简单的说就是函数嵌套关系到作用域链的问题。</p>
-        
-          <a class="article-more-a" href="/2017/04/12/JavaScript闭包/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/12/JavaScript闭包/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -970,8 +350,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
