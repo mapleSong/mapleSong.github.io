@@ -6,20 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>JavaScript代码库(封装) | Asimov&#39;s Blog</title>
+  <title>Archives: 2018/6 | Asimov&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="常用工具库，持续更新。。。">
-<meta name="keywords" content="JavaScript">
-<meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript代码库(封装)">
-<meta property="og:url" content="http://yoursite.com/2018/05/12/JavaScript代码库(封装)/index.html">
+  <meta name="description" content="Try to find me.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Asimov&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/archives/2018/06/index.html">
 <meta property="og:site_name" content="Asimov&#39;s Blog">
-<meta property="og:description" content="常用工具库，持续更新。。。">
+<meta property="og:description" content="Try to find me.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-17T09:19:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript代码库(封装)">
-<meta name="twitter:description" content="常用工具库，持续更新。。。">
+<meta name="twitter:title" content="Asimov&#39;s Blog">
+<meta name="twitter:description" content="Try to find me.">
   
     <link rel="alternative" href="/atom.xml" title="Asimov&#39;s Blog" type="application/atom+xml">
   
@@ -163,47 +161,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JavaScript代码库(封装)" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      JavaScript代码库(封装)
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/06/10/Vue按需加载ECharts模块/" class="archive-article-date">
+  	<time datetime="2018-06-10T13:07:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-10</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/06/10/Vue按需加载ECharts模块/">Vue按需加载ECharts模块</a>
     </h1>
   
 
-        
-        <a href="/2018/05/12/JavaScript代码库(封装)/" class="archive-article-date">
-  	<time datetime="2018-05-12T14:12:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>常用工具库，持续更新。。。</p>
-<a id="more"></a>
-<h4 id="去除字符串空格"><a href="#去除字符串空格" class="headerlink" title="去除字符串空格"></a>去除字符串空格</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//去除空格  type 1-所有空格  2-前后空格  3-前空格 4-后空格</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">trim</span>(<span class="params">str,type</span>)</span>&#123;</div><div class="line">    <span class="keyword">switch</span> (type)&#123;</div><div class="line">        <span class="keyword">case</span> <span class="number">1</span>:<span class="keyword">return</span> str.replace(<span class="regexp">/\s+/g</span>,<span class="string">""</span>);</div><div class="line">        <span class="keyword">case</span> <span class="number">2</span>:<span class="keyword">return</span> str.replace(<span class="regexp">/(^\s*)|(\s*$)/g</span>, <span class="string">""</span>);</div><div class="line">        <span class="keyword">case</span> <span class="number">3</span>:<span class="keyword">return</span> str.replace(<span class="regexp">/(^\s*)/g</span>, <span class="string">""</span>);</div><div class="line">        <span class="keyword">case</span> <span class="number">4</span>:<span class="keyword">return</span> str.replace(<span class="regexp">/(\s*$)/g</span>, <span class="string">""</span>);</div><div class="line">        <span class="keyword">default</span>:<span class="keyword">return</span> str;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="字母大小写切换"><a href="#字母大小写切换" class="headerlink" title="字母大小写切换"></a>字母大小写切换</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*type</span></div><div class="line"><span class="comment">1:首字母大写   </span></div><div class="line"><span class="comment">2：首页母小写</span></div><div class="line"><span class="comment">3：大小写转换</span></div><div class="line"><span class="comment">4：全部大写</span></div><div class="line"><span class="comment">5：全部小写</span></div><div class="line"><span class="comment"> * */</span></div><div class="line"><span class="comment">//changeCase('asdasd',1)</span></div><div class="line"><span class="comment">//Asdasd</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeCase</span>(<span class="params">str,type</span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">ToggleCase</span>(<span class="params">str</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> itemText = <span class="string">""</span></div><div class="line">        str.split(<span class="string">""</span>).forEach(</div><div class="line">            <span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</div><div class="line">                <span class="keyword">if</span> (<span class="regexp">/^([a-z]+)/</span>.test(item)) &#123;</div><div class="line">                    itemText += item.toUpperCase();</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (<span class="regexp">/^([A-Z]+)/</span>.test(item)) &#123;</div><div class="line">                    itemText += item.toLowerCase();</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">else</span>&#123;</div><div class="line">                    itemText += item;</div><div class="line">                &#125;</div><div class="line">            &#125;);</div><div class="line">        <span class="keyword">return</span> itemText;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">switch</span> (type) &#123;</div><div class="line">        <span class="keyword">case</span> <span class="number">1</span>:</div><div class="line">            <span class="keyword">return</span> str.replace(<span class="regexp">/^(\w)(\w+)/</span>, <span class="function"><span class="keyword">function</span> (<span class="params">v, v1, v2</span>) </span>&#123;</div><div class="line">                <span class="keyword">return</span> v1.toUpperCase() + v2.toLowerCase();</div><div class="line">            &#125;);</div><div class="line">        <span class="keyword">case</span> <span class="number">2</span>:</div><div class="line">            <span class="keyword">return</span> str.replace(<span class="regexp">/^(\w)(\w+)/</span>, <span class="function"><span class="keyword">function</span> (<span class="params">v, v1, v2</span>) </span>&#123;</div><div class="line">                <span class="keyword">return</span> v1.toLowerCase() + v2.toUpperCase();</div><div class="line">            &#125;);</div><div class="line">        <span class="keyword">case</span> <span class="number">3</span>:</div><div class="line">            <span class="keyword">return</span> ToggleCase(str);</div><div class="line">        <span class="keyword">case</span> <span class="number">4</span>:</div><div class="line">            <span class="keyword">return</span> str.toUpperCase();</div><div class="line">        <span class="keyword">case</span> <span class="number">5</span>:</div><div class="line">            <span class="keyword">return</span> str.toLowerCase();</div><div class="line">        <span class="keyword">default</span>:</div><div class="line">            <span class="keyword">return</span> str;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="字符串循环复制"><a href="#字符串循环复制" class="headerlink" title="字符串循环复制"></a>字符串循环复制</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//repeatStr(str-&gt;字符串, count-&gt;次数)</span></div><div class="line"><span class="comment">//repeatStr('123',3)</span></div><div class="line"><span class="comment">//"123123123"</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">repeatStr</span>(<span class="params">str, count</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> text = <span class="string">''</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; count; i++) &#123;</div><div class="line">        text += str;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> text;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="字符串替换"><a href="#字符串替换" class="headerlink" title="字符串替换"></a>字符串替换</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//字符串替换(字符串,要替换的字符,替换成什么)</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">replaceAll</span>(<span class="params">str,AFindText,ARepText</span>)</span>&#123;</div><div class="line">　　　raRegExp = <span class="keyword">new</span> <span class="built_in">RegExp</span>(AFindText,<span class="string">"g"</span>);</div><div class="line">　　　<span class="keyword">return</span> str.replace(raRegExp,ARepText);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="手机号替换-等"><a href="#手机号替换-等" class="headerlink" title="手机号替换*等"></a>手机号替换*等</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//replaceStr(字符串,字符格式, 替换方式,替换的字符（默认*）)</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">replaceStr</span>(<span class="params">str, regArr, type,ARepText</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> regtext = <span class="string">''</span>, Reg = <span class="literal">null</span>,replaceText=ARepText||<span class="string">'*'</span>;</div><div class="line">    <span class="comment">//replaceStr('18819322663',[3,5,3],0)</span></div><div class="line">    <span class="comment">//188*****663</span></div><div class="line">    <span class="comment">//repeatStr是在上面定义过的（字符串循环复制），大家注意哦</span></div><div class="line">    <span class="keyword">if</span> (regArr.length === <span class="number">3</span> &amp;&amp; type === <span class="number">0</span>) &#123;</div><div class="line">        regtext = <span class="string">'(\\w&#123;'</span> + regArr[<span class="number">0</span>] + <span class="string">'&#125;)\\w&#123;'</span> + regArr[<span class="number">1</span>] + <span class="string">'&#125;(\\w&#123;'</span> + regArr[<span class="number">2</span>] + <span class="string">'&#125;)'</span></div><div class="line">        Reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(regtext);</div><div class="line">        <span class="keyword">var</span> replaceCount = repeatStr(replaceText, regArr[<span class="number">1</span>]);</div><div class="line">        <span class="keyword">return</span> str.replace(Reg, <span class="string">'$1'</span> + replaceCount + <span class="string">'$2'</span>)</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//replaceStr('asdasdasdaa',[3,5,3],1)</span></div><div class="line">    <span class="comment">//***asdas***</span></div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (regArr.length === <span class="number">3</span> &amp;&amp; type === <span class="number">1</span>) &#123;</div><div class="line">        regtext = <span class="string">'\\w&#123;'</span> + regArr[<span class="number">0</span>] + <span class="string">'&#125;(\\w&#123;'</span> + regArr[<span class="number">1</span>] + <span class="string">'&#125;)\\w&#123;'</span> + regArr[<span class="number">2</span>] + <span class="string">'&#125;'</span></div><div class="line">        Reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(regtext);</div><div class="line">        <span class="keyword">var</span> replaceCount1 = repeatSte(replaceText, regArr[<span class="number">0</span>]);</div><div class="line">        <span class="keyword">var</span> replaceCount2 = repeatSte(replaceText, regArr[<span class="number">2</span>]);</div><div class="line">        <span class="keyword">return</span> str.replace(Reg, replaceCount1 + <span class="string">'$1'</span> + replaceCount2)</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//replaceStr('1asd88465asdwqe3',[5],0)</span></div><div class="line">    <span class="comment">//*****8465asdwqe3</span></div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (regArr.length === <span class="number">1</span> &amp;&amp; type == <span class="number">0</span>) &#123;</div><div class="line">        regtext = <span class="string">'(^\\w&#123;'</span> + regArr[<span class="number">0</span>] +  <span class="string">'&#125;)'</span></div><div class="line">        Reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(regtext);</div><div class="line">        <span class="keyword">var</span> replaceCount = repeatSte(replaceText, regArr[<span class="number">0</span>]);</div><div class="line">        <span class="keyword">return</span> str.replace(Reg, replaceCount)</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//replaceStr('1asd88465asdwqe3',[5],1,'+')</span></div><div class="line">    <span class="comment">//"1asd88465as+++++"</span></div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (regArr.length === <span class="number">1</span> &amp;&amp; type == <span class="number">1</span>) &#123;</div><div class="line">        regtext = <span class="string">'(\\w&#123;'</span> + regArr[<span class="number">0</span>] +  <span class="string">'&#125;$)'</span></div><div class="line">        Reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(regtext);</div><div class="line">        <span class="keyword">var</span> replaceCount = repeatSte(replaceText, regArr[<span class="number">0</span>]);</div><div class="line">        <span class="keyword">return</span> str.replace(Reg, replaceCount)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="检测密码强度"><a href="#检测密码强度" class="headerlink" title="检测密码强度"></a>检测密码强度</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//checkPwd('12asdASAD')</span></div><div class="line"><span class="comment">//3(强度等级为3)</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkPwd</span>(<span class="params">str</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> nowLv = <span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span> (str.length &lt; <span class="number">6</span>) &#123;</div><div class="line">        <span class="keyword">return</span> nowLv</div><div class="line">    &#125;</div><div class="line">    ;</div><div class="line">    <span class="keyword">if</span> (<span class="regexp">/[0-9]/</span>.test(str)) &#123;</div><div class="line">        nowLv++</div><div class="line">    &#125;</div><div class="line">    ;</div><div class="line">    <span class="keyword">if</span> (<span class="regexp">/[a-z]/</span>.test(str)) &#123;</div><div class="line">        nowLv++</div><div class="line">    &#125;</div><div class="line">    ;</div><div class="line">    <span class="keyword">if</span> (<span class="regexp">/[A-Z]/</span>.test(str)) &#123;</div><div class="line">        nowLv++</div><div class="line">    &#125;</div><div class="line">    ;</div><div class="line">    <span class="keyword">if</span> (<span class="regexp">/[\.|-|_]/</span>.test(str)) &#123;</div><div class="line">        nowLv++</div><div class="line">    &#125;</div><div class="line">    ;</div><div class="line">    <span class="keyword">return</span> nowLv;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="随机码"><a href="#随机码" class="headerlink" title="随机码"></a>随机码</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//count取值范围0-36</span></div><div class="line"></div><div class="line"><span class="comment">//randomNumber(10)</span></div><div class="line"><span class="comment">//"2584316588472575"</span></div><div class="line"></div><div class="line"><span class="comment">//randomNumber(14)</span></div><div class="line"><span class="comment">//"9b405070dd00122640c192caab84537"</span></div><div class="line"></div><div class="line"><span class="comment">//Math.random().toString(36).substring(2);</span></div><div class="line"><span class="comment">//"83vhdx10rmjkyb9"</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">randomNumber</span>(<span class="params">count</span>)</span>&#123;</div><div class="line">   <span class="keyword">return</span> <span class="built_in">Math</span>.random().toString(count).substring(<span class="number">2</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="查找字符串"><a href="#查找字符串" class="headerlink" title="查找字符串"></a>查找字符串</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">countStr</span> (<span class="params">str,strSplit</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> str.split(strSplit).length<span class="number">-1</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> strTest=<span class="string">'sad44654blog5a1sd67as9dablog4s5d16zxc4sdweasjkblogwqepaskdkblogahseiuadbhjcibloguyeajzxkcabloguyiwezxc967'</span></div><div class="line"><span class="comment">//countStr(strTest,'blog')</span></div><div class="line"><span class="comment">//6</span></div></pre></td></tr></table></figure>
-<h4 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//cookie</span></div><div class="line"><span class="comment">//设置cookie</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">setCookie</span>(<span class="params">name,value,iDay</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> oDate=<span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">    oDate.setDate(oDate.getDate()+iDay);</div><div class="line">    <span class="built_in">document</span>.cookie=name+<span class="string">'='</span>+value+<span class="string">';expires='</span>+oDate;</div><div class="line">&#125;</div><div class="line"><span class="comment">//获取cookie</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getCookie</span>(<span class="params">name</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> arr=<span class="built_in">document</span>.cookie.split(<span class="string">'; '</span>);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</div><div class="line">        <span class="keyword">var</span> arr2=arr[i].split(<span class="string">'='</span>);</div><div class="line">        <span class="keyword">if</span>(arr2[<span class="number">0</span>]==name)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">return</span> arr2[<span class="number">1</span>];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="string">''</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">//删除cookie</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeCookie</span>(<span class="params">name</span>)</span>&#123;</div><div class="line">    setCookie(name,<span class="number">1</span>,<span class="number">-1</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="localStorage"><a href="#localStorage" class="headerlink" title="localStorage"></a>localStorage</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Storage = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    set: <span class="function"><span class="keyword">function</span>(<span class="params">key, value, expireSeconds</span>)</span>&#123;</div><div class="line">      localStorage[key] = <span class="built_in">JSON</span>.stringify(&#123;</div><div class="line">        value: value, </div><div class="line">        expired: expireSeconds===<span class="literal">undefined</span>?<span class="literal">undefined</span>:<span class="built_in">Date</span>.now() + <span class="number">1000</span>*expireSeconds</div><div class="line">      &#125;)</div><div class="line">    &#125;,</div><div class="line">    get: <span class="function"><span class="keyword">function</span>(<span class="params">key</span>)</span>&#123;</div><div class="line">      <span class="keyword">if</span>(localStorage[key] === <span class="literal">undefined</span>)&#123;</div><div class="line">        <span class="keyword">return</span></div><div class="line">      &#125;</div><div class="line">      <span class="keyword">var</span> o = <span class="built_in">JSON</span>.parse(localStorage[key])</div><div class="line">      <span class="keyword">if</span>(o.expired === <span class="literal">undefined</span> || <span class="built_in">Date</span>.now() &lt; o.expired)&#123;</div><div class="line">        <span class="keyword">return</span> o.value</div><div class="line">      &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="keyword">delete</span> localStorage[key]</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line"> &#125;</div><div class="line">&#125;)()</div><div class="line"></div><div class="line">Storage.set(<span class="string">'name'</span>, <span class="string">'sss’) </span></div><div class="line"><span class="string">Storage.set('</span>age<span class="string">', 2, 30) ; //设置 name 字段存储的值为'</span>sss’</div><div class="line">Storage.set(<span class="string">'teachers'</span>, [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>], <span class="number">60</span>) </div><div class="line"></div><div class="line">Storage.get(<span class="string">'name'</span>)   <span class="comment">// ‘sss’</span></div><div class="line">Storage.get(<span class="string">'age'</span>)     <span class="comment">//  如果不超过30秒，返回数字类型的2；如果超过30秒，返回 undefined，并且 localStorage 里清除 age 字段</span></div><div class="line">Storage.get(<span class="string">'teachers'</span>)  <span class="comment">//如果不超过60秒，返回数组； 如果超过60秒，返回 undefined，并且 localStorage 里清除 teachers 字段</span></div></pre></td></tr></table></figure>
-<h4 id="Date日期时间部分"><a href="#Date日期时间部分" class="headerlink" title="Date日期时间部分"></a>Date日期时间部分</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//到某一个时间的倒计时</span></div><div class="line"><span class="comment">//getEndTime('2017/7/22 16:0:0')</span></div><div class="line"><span class="comment">//"剩余时间6天 2小时 28 分钟20 秒"</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getEndTime</span>(<span class="params">endTime</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> startDate=<span class="keyword">new</span> <span class="built_in">Date</span>();  <span class="comment">//开始时间，当前时间</span></div><div class="line">    <span class="keyword">var</span> endDate=<span class="keyword">new</span> <span class="built_in">Date</span>(endTime); <span class="comment">//结束时间，需传入时间参数</span></div><div class="line">    <span class="keyword">var</span> t=endDate.getTime()-startDate.getTime();  <span class="comment">//时间差的毫秒数</span></div><div class="line">    <span class="keyword">var</span> d=<span class="number">0</span>,h=<span class="number">0</span>,m=<span class="number">0</span>,s=<span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span>(t&gt;=<span class="number">0</span>)&#123;</div><div class="line">      d=<span class="built_in">Math</span>.floor(t/<span class="number">1000</span>/<span class="number">3600</span>/<span class="number">24</span>);</div><div class="line">      h=<span class="built_in">Math</span>.floor(t/<span class="number">1000</span>/<span class="number">60</span>/<span class="number">60</span>%<span class="number">24</span>);</div><div class="line">      m=<span class="built_in">Math</span>.floor(t/<span class="number">1000</span>/<span class="number">60</span>%<span class="number">60</span>);</div><div class="line">      s=<span class="built_in">Math</span>.floor(t/<span class="number">1000</span>%<span class="number">60</span>);</div><div class="line">    &#125; </div><div class="line">    <span class="keyword">return</span> <span class="string">"剩余时间"</span>+d+<span class="string">"天 "</span>+h+<span class="string">"小时 "</span>+m+<span class="string">" 分钟"</span>+s+<span class="string">" 秒"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -211,119 +198,27 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/05/12/JavaScript代码库(封装)/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/06/10/Vue按需加载ECharts模块/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Vue按需加载ECharts模块
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/05/05/JavaScript Class的基本语法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JavaScript Class的基本语法</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -346,8 +241,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
