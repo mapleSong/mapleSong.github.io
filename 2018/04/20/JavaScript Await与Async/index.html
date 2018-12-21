@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>JavaScript Await与Async | Asimov&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Promise已经很好的解决了回调地域，相对来说也是非常优雅的的选择。那么有没有更好的方案呢？答案就是async/await。async/await应该是目前最简单的异步方案了">
+  <meta name="description" content="Promise已经初步的解决了回调地域，但是蛋疼的then()一样会令人窒息。那么有没有更好的方案呢？答案就是ES7的async/await。async/await应该是目前较完美的异步方案了">
 <meta name="keywords" content="JavaScript,ES6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript Await与Async">
 <meta property="og:url" content="http://yoursite.com/2018/04/20/JavaScript Await与Async/index.html">
 <meta property="og:site_name" content="Asimov&#39;s Blog">
-<meta property="og:description" content="Promise已经很好的解决了回调地域，相对来说也是非常优雅的的选择。那么有没有更好的方案呢？答案就是async/await。async/await应该是目前最简单的异步方案了">
+<meta property="og:description" content="Promise已经初步的解决了回调地域，但是蛋疼的then()一样会令人窒息。那么有没有更好的方案呢？答案就是ES7的async/await。async/await应该是目前较完美的异步方案了">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-17T09:27:13.000Z">
+<meta property="og:updated_time" content="2018-12-21T02:57:22.664Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript Await与Async">
-<meta name="twitter:description" content="Promise已经很好的解决了回调地域，相对来说也是非常优雅的的选择。那么有没有更好的方案呢？答案就是async/await。async/await应该是目前最简单的异步方案了">
+<meta name="twitter:description" content="Promise已经初步的解决了回调地域，但是蛋疼的then()一样会令人窒息。那么有没有更好的方案呢？答案就是ES7的async/await。async/await应该是目前较完美的异步方案了">
   
     <link rel="alternative" href="/atom.xml" title="Asimov&#39;s Blog" type="application/atom+xml">
   
@@ -88,8 +88,6 @@
 		        
 					<a class="weibo" target="_blank" href="http://weibo.com/u/3128394747" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="weixin" target="_blank" href="/generation_feng" title="weixin"><i class="icon-weixin"></i></a>
-		        
 					<a class="mail" target="_blank" href="mailto:meetguardian@outlook.com" title="mail"><i class="icon-mail"></i></a>
 		        
 					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
@@ -132,8 +130,6 @@
 						<a class="github" target="_blank" href="https://github.com/mapleSong" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="weibo" target="_blank" href="http://weibo.com/u/3128394747" title="weibo"><i class="icon-weibo"></i></a>
-			        
-						<a class="weixin" target="_blank" href="/generation_feng" title="weixin"><i class="icon-weixin"></i></a>
 			        
 						<a class="mail" target="_blank" href="mailto:meetguardian@outlook.com" title="mail"><i class="icon-mail"></i></a>
 			        
@@ -183,7 +179,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Promise已经很好的解决了回调地域，相对来说也是非常优雅的的选择。那么有没有更好的方案呢？答案就是async/await。async/await应该是目前最简单的异步方案了</p>
+        <p>Promise已经初步的解决了回调地域，但是蛋疼的then()一样会令人窒息。那么有没有更好的方案呢？答案就是ES7的async/await。async/await应该是目前较完美的异步方案了</p>
 <a id="more"></a>
 <hr>
 <h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> PromiseDemo = <span class="function"><span class="keyword">function</span>(<span class="params">time</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve,reject</span>)</span>&#123;</span><br><span class="line">        setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">            resolve()</span><br><span class="line">        &#125;,time)</span><br><span class="line">	&#125;	</span><br><span class="line">&#125;)</span><br><span class="line">    </span><br><span class="line"><span class="keyword">var</span> toStart = <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'start'</span>)</span><br><span class="line">    <span class="keyword">await</span> PromiseDemo(<span class="number">300</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'end'</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">toStart()</span><br></pre></td></tr></table></figure>

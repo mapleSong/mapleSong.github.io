@@ -16,10 +16,12 @@
 <meta property="og:site_name" content="Asimov&#39;s Blog">
 <meta property="og:description" content="Gulp.js 是基于 Node.js 构建的,利用 Node.js 流的威力,可以快速构建项目， 是一个自动化构建工具,开发者可以使用它在项目开发过程中自动执行常见任务。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-02-24T09:41:58.000Z">
+<meta property="og:image" content="http://yoursite.com/Users/maple/Desktop/Blog/hexo/source/assets/coverImg/gulp.png">
+<meta property="og:updated_time" content="2018-12-21T03:01:06.799Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Gulp自动化构建工具">
 <meta name="twitter:description" content="Gulp.js 是基于 Node.js 构建的,利用 Node.js 流的威力,可以快速构建项目， 是一个自动化构建工具,开发者可以使用它在项目开发过程中自动执行常见任务。">
+<meta name="twitter:image" content="http://yoursite.com/Users/maple/Desktop/Blog/hexo/source/assets/coverImg/gulp.png">
   
     <link rel="alternative" href="/atom.xml" title="Asimov&#39;s Blog" type="application/atom+xml">
   
@@ -88,8 +90,6 @@
 		        
 					<a class="weibo" target="_blank" href="http://weibo.com/u/3128394747" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="weixin" target="_blank" href="/generation_feng" title="weixin"><i class="icon-weixin"></i></a>
-		        
 					<a class="mail" target="_blank" href="mailto:meetguardian@outlook.com" title="mail"><i class="icon-mail"></i></a>
 		        
 					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
@@ -132,8 +132,6 @@
 						<a class="github" target="_blank" href="https://github.com/mapleSong" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="weibo" target="_blank" href="http://weibo.com/u/3128394747" title="weibo"><i class="icon-weibo"></i></a>
-			        
-						<a class="weixin" target="_blank" href="/generation_feng" title="weixin"><i class="icon-weixin"></i></a>
 			        
 						<a class="mail" target="_blank" href="mailto:meetguardian@outlook.com" title="mail"><i class="icon-mail"></i></a>
 			        
@@ -183,13 +181,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Gulp.js 是基于 Node.js 构建的,利用 Node.js 流的威力,可以快速构建项目，</p>
+        <p><img src="/Users/maple/Desktop/Blog/hexo/source/assets/coverImg/gulp.png" alt=""></p>
+<p>Gulp.js 是基于 Node.js 构建的,利用 Node.js 流的威力,可以快速构建项目，</p>
 <p>是一个自动化构建工具,开发者可以使用它在项目开发过程中自动执行常见任务。</p>
 <a id="more"></a>
-<h2 id="Gulp安装"><a href="#Gulp安装" class="headerlink" title="Gulp安装"></a>Gulp安装</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install -g gulp   <span class="comment">// 全局安装gulp</span></div><div class="line">$ gulp -v 				     <span class="comment">// 查看gulp版本号，是否安装成功</span></div><div class="line">$ npm init 				     <span class="comment">// 创建文件夹，初始化npm(项目名称不能为gulp)</span></div><div class="line">$ npm install gulp —save-dev <span class="comment">// 当前文件夹安装本地gulp文件</span></div></pre></td></tr></table></figure>
+<h2 id="Gulp安装"><a href="#Gulp安装" class="headerlink" title="Gulp安装"></a>Gulp安装</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g gulp   <span class="comment">// 全局安装gulp</span></span><br><span class="line">$ gulp -v 				     <span class="comment">// 查看gulp版本号，是否安装成功</span></span><br><span class="line">$ npm init 				     <span class="comment">// 创建文件夹，初始化npm(项目名称不能为gulp)</span></span><br><span class="line">$ npm install gulp —save-dev <span class="comment">// 当前文件夹安装本地gulp文件</span></span><br></pre></td></tr></table></figure>
 <p>上述命令执行完成后需要再创建一个gulpfile.js文件来用来配置gulp。</p>
 <h2 id="Gulp使用"><a href="#Gulp使用" class="headerlink" title="Gulp使用"></a>Gulp使用</h2><p>我使用gulp最常用的功能就是压缩css,js代码和添加css代码中兼容浏览器前缀。这三个功能分别需要安装三个gulp插件：gulp-uglify（压缩js代码）、gulp-css（压缩css代码）、gulp-autoprefixer（css兼容浏览器前缀）。所以需要通过npm来安装这三个插件：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$npm install gulp-uglify --save-dev</div><div class="line">$npm install gulp-css --save-dev</div><div class="line">$npm install gulp-autoprefixer --save-dev</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$npm install gulp-uglify --save-dev</span><br><span class="line">$npm install gulp-css --save-dev</span><br><span class="line">$npm install gulp-autoprefixer --save-dev</span><br></pre></td></tr></table></figure>
 <p>在项目中我们需要存放我们需要压缩的代码，在项目中创建一个src文件夹，其中存放js，css文件。</p>
 <p>​    |——src</p>
 <p>​        |——-js</p>
@@ -201,11 +200,11 @@
 <p>​        |—— js</p>
 <p>​        |——-css</p>
 <p>​    下面就要配置gulp文件了，在刚刚创建的gulpfile.js文件中进行配置。所有配置代码如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</div><div class="line"><span class="keyword">var</span> uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>);</div><div class="line"><span class="keyword">var</span> autoprefixer = <span class="built_in">require</span>(<span class="string">'gulp-autoprefixer'</span>);</div><div class="line"><span class="keyword">var</span> cssMin = <span class="built_in">require</span>(<span class="string">'gulp-css'</span>);</div><div class="line"></div><div class="line">gulp.task(<span class="string">'script'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="comment">// 压缩js代码</span></div><div class="line">    <span class="keyword">return</span> gulp.src(<span class="string">'src/js/**/*.js'</span>)</div><div class="line">    .pipe(uglify()) <span class="comment">//引用插件</span></div><div class="line">    .pipe(gulp.dest(<span class="string">'./dist/js'</span>)); <span class="comment">//存放的位置</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line"></div><div class="line">gulp.task(<span class="string">'css'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> gulp.src(<span class="string">'src/css/**/*.css'</span>)</div><div class="line">    .pipe(autoprefixer(&#123;  <span class="comment">//兼容性浏览器前缀添加</span></div><div class="line">        browsers:[<span class="string">'last 40 versions'</span>],<span class="comment">//版本范围</span></div><div class="line">        cascade:<span class="literal">false</span> <span class="comment">//是否美化属性值 默认是true 这里写false不需要</span></div><div class="line">    &#125;))</div><div class="line">    .pipe(cssMin()) <span class="comment">//引用插件</span></div><div class="line">    .pipe(gulp.dest(<span class="string">'./dist/css'</span>));<span class="comment">//存放的位置</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>,[<span class="string">'script'</span>,<span class="string">'css'</span>],<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'任务完成'</span>);</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//如果不需要兼容性前缀添加，直接将pipe(autoprefixer)任务这部分删除。其他同理。</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</span><br><span class="line"><span class="keyword">var</span> uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>);</span><br><span class="line"><span class="keyword">var</span> autoprefixer = <span class="built_in">require</span>(<span class="string">'gulp-autoprefixer'</span>);</span><br><span class="line"><span class="keyword">var</span> cssMin = <span class="built_in">require</span>(<span class="string">'gulp-css'</span>);</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'script'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="comment">// 压缩js代码</span></span><br><span class="line">    <span class="keyword">return</span> gulp.src(<span class="string">'src/js/**/*.js'</span>)</span><br><span class="line">    .pipe(uglify()) <span class="comment">//引用插件</span></span><br><span class="line">    .pipe(gulp.dest(<span class="string">'./dist/js'</span>)); <span class="comment">//存放的位置</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'css'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.src(<span class="string">'src/css/**/*.css'</span>)</span><br><span class="line">    .pipe(autoprefixer(&#123;  <span class="comment">//兼容性浏览器前缀添加</span></span><br><span class="line">        browsers:[<span class="string">'last 40 versions'</span>],<span class="comment">//版本范围</span></span><br><span class="line">        cascade:<span class="literal">false</span> <span class="comment">//是否美化属性值 默认是true 这里写false不需要</span></span><br><span class="line">    &#125;))</span><br><span class="line">    .pipe(cssMin()) <span class="comment">//引用插件</span></span><br><span class="line">    .pipe(gulp.dest(<span class="string">'./dist/css'</span>));<span class="comment">//存放的位置</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'default'</span>,[<span class="string">'script'</span>,<span class="string">'css'</span>],<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'任务完成'</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//如果不需要兼容性前缀添加，直接将pipe(autoprefixer)任务这部分删除。其他同理。</span></span><br></pre></td></tr></table></figure>
 <p>​    配置好gulp后就可以将代码存放在src中，通过命令来进行相应操作：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gulp <span class="comment">//默认全部执行</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gulp script <span class="comment">//仅压缩js代码</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gulp css <span class="comment">//仅压缩css代码</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gulp <span class="comment">//默认全部执行</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gulp script <span class="comment">//仅压缩js代码</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gulp css <span class="comment">//仅压缩css代码</span></span><br></pre></td></tr></table></figure>
 
       
 
@@ -293,18 +292,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/01/15/2017年终总结/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/02/27/ 小程序框架WePY/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          2017年终总结
+          小程序框架WePY
         
       </div>
     </a>
   
   
-    <a href="/2017/06/06/JavaScript面向对象/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JavaScript面向对象</div>
+    <a href="/2017/06/05/Git使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Git使用</div>
       <i class="icon-circle-right"></i>
     </a>
   
