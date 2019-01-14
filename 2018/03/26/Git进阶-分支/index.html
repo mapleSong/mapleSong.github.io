@@ -17,13 +17,13 @@
 <meta property="og:description" content="为什么要创建分支？">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2018/03/26/assets/coverImg/git.png">
-<meta property="og:image" content="http://yoursite.com/2018/03/26/assets/cc.png">
-<meta property="og:image" content="http://yoursite.com/2018/03/26/assets/articleImg/15/2.png">
-<meta property="og:image" content="http://yoursite.com/2018/03/26/assets/articleImg/15/3.png">
-<meta property="og:image" content="http://yoursite.com/2018/03/26/assets/articleImg/15/4.png">
-<meta property="og:image" content="http://yoursite.com/2018/03/26/assets/articleImg/15/5.png">
-<meta property="og:image" content="http://yoursite.com/2018/03/26/assets/articleImg/15/6.png">
-<meta property="og:updated_time" content="2018-12-26T06:25:15.424Z">
+<meta property="og:image" content="http://mapleSong.github.io/assets/articleImg/15/1.png">
+<meta property="og:image" content="http://mapleSong.github.io/assets/articleImg/15/2.png">
+<meta property="og:image" content="http://mapleSong.github.io/assets/articleImg/15/3.png">
+<meta property="og:image" content="http://mapleSong.github.io/assets/articleImg/15/4.png">
+<meta property="og:image" content="http://mapleSong.github.io/assets/articleImg/15/5.png">
+<meta property="og:image" content="http://mapleSong.github.io/assets/articleImg/15/6.png">
+<meta property="og:updated_time" content="2019-01-14T06:42:49.341Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git进阶-分支">
 <meta name="twitter:description" content="为什么要创建分支？">
@@ -193,21 +193,21 @@
 <h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><hr>
 <p>假如我们开发完成了一个项目并且已经上线，接下来开始迭代开发。如果线上的项目出现了一个严重的bug，这就需要我们放下手头的开发去解决这个bug然后再发布一个新版本。如果在线上修改的话并不现实，如果操作失误会造成更大的损失，这时我们就需要用的git的分支来解决这个问题。</p>
 <p>如下所示：</p>
-<p><img src="../assets/cc.png" alt="&#39;x&#39;"></p>
+<p><img src="http://mapleSong.github.io/assets/articleImg/15/1.png" alt="&#39;x&#39;"></p>
 <p>master是项目代码的主干，所有最终上线的代码都在master上，从v1.0版本一直优化到v1.3版本，在v1.3版本出现bug，这时我们就要在v1.3这个版本创建一个分支debug分支，在这个分支上去修复bug。修复完成后将v1.5版本合并到master主分支v2.1版本上即可，这样接下来就可以继续迭代开发。</p>
 <h3 id="分支的创建"><a href="#分支的创建" class="headerlink" title="分支的创建"></a>分支的创建</h3><hr>
 <p>首先查看一下项目提交记录</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git log</span><br></pre></td></tr></table></figure>
-<p><img src="../assets/articleImg/15/2.png" alt=""></p>
+<p><img src="http://mapleSong.github.io/assets/articleImg/15/2.png" alt=""></p>
 <p>假如项目在v1.4版本中有bug需要进行处理，那么我们就要在第三次提交的v1.4版本创建一个修复版本进行修复。</p>
 <p>我们要切换到第三次提交的版本上。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout 73821029954db497bdc0373242df882405479b97</span><br></pre></td></tr></table></figure>
-<p><img src="../assets/articleImg/15/3.png" alt=""></p>
+<p><img src="http://mapleSong.github.io/assets/articleImg/15/3.png" alt=""></p>
 <p>切换成功后开始建立分支</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch developer(分支名称)</span><br></pre></td></tr></table></figure>
 <p>查询是否创建成功</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br></pre></td></tr></table></figure>
-<p><img src="../assets/articleImg/15/4.png" alt=""></p>
+<p><img src="http://mapleSong.github.io/assets/articleImg/15/4.png" alt=""></p>
 <p>developer存在说明创建成功。</p>
 <p>接下来我们切换到developer分支上进行开发</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout developer</span><br></pre></td></tr></table></figure>
@@ -218,12 +218,12 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout master</span><br></pre></td></tr></table></figure>
 <p>然后在进行合并</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git merge developer</span><br></pre></td></tr></table></figure>
-<p><img src="../assets/articleImg/15/5.png" alt=""></p>
+<p><img src="http://mapleSong.github.io/assets/articleImg/15/5.png" alt=""></p>
 <p>合并成功</p>
 <p>如果以后不打算在使用这个分支了,接下来就可以把这个分支删除</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -D developer</span><br></pre></td></tr></table></figure>
 <p>在查看一下确认一下是否删除成功</p>
-<p><img src="../assets/articleImg/15/6.png" alt=""></p>
+<p><img src="http://mapleSong.github.io/assets/articleImg/15/6.png" alt=""></p>
 <p>这样整套流程就已经完成了。</p>
 
       
@@ -312,18 +312,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/03/26/Promise解析/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/04/20/JavaScript Await与Async/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Promise解析
+          JavaScript Await与Async
         
       </div>
     </a>
   
   
-    <a href="/2018/02/27/ 小程序框架WePY/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">小程序框架WePY</div>
+    <a href="/2018/03/26/Promise解析/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Promise解析</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -366,7 +366,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 Asimov
+    		&copy; 2019 Asimov
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -449,6 +449,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">工具</a>
               </li>
              
@@ -457,31 +461,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">个人</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">总结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">javascript，前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">gulp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -489,7 +469,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">gulp</a>
               </li>
             
             <div class="clearfix"></div>
