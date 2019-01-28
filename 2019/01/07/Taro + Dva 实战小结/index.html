@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+    <meta name="description" content="Try to find me.">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    Taro + Dva 实战小结 |
+    
+    Asimov</title>
+  
+    <link rel="shortcut icon" href="/logo.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+  
+  <script src="/js/pace.min.js"></script>
+</head>
+
+<body>
+<main class="content">
+  <section class="outer">
+  <article id="post-Taro + Dva 实战小结" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Taro + Dva 实战小结
+    </h1>
+  
+
+      </header>
+    
+
+    
+      <div class="article-meta">
+        <a href="/2019/01/07/Taro + Dva 实战小结/" class="article-date">
+  <time datetime="2019-01-07T13:19:40.000Z" itemprop="datePublished">2019-01-07</time>
+</a>
+        
+      </div>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+      
+        <p>技术栈：React + Taro + Dva</p>
+<p><strong>Taro </strong>是基于 Reac t语法规范的重微信小程序的框架，它同时可以完成多端适配的需求。</p>
+<p>使用 Taro，我们可以只书写一套代码，再通过 Taro 的编译工具，将源代码分别编译出可以在不同端（微信/百度/支付宝/字节跳动小程序、H5、React-Native 等）运行的代码。</p>
+<p><strong>Dva</strong> 是一个基于 redux 和 redux-saga 的数据流方案，然后为了简化开发体验，dva 还额外内置了 react-router 和 fetch，所以也可以理解为一个轻量级的应用框架。</p>
+<p>这里我仅对微信小程序开发进行小结。</p>
+<a id="more"></a>
+<h3 id="Taro-特性"><a href="#Taro-特性" class="headerlink" title="Taro 特性"></a>Taro 特性</h3><p><strong>React 语法风格</strong></p>
+<p>Taro遵循React语法规范，它采用与 React 一致的组件化思想，组件生命周期与 React 保持一致，同时支持使用 JSX 语法，让代码具有更丰富的表现力，使用Taro进行开发可以获得和 React 一致的开发体验。</p>
+<p>代码示例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">import Taro, &#123; Component &#125; from &apos;@tarojs/taro&apos;</span><br><span class="line">import &#123; View, Button &#125; from &apos;@tarojs/components&apos;</span><br><span class="line"></span><br><span class="line">export default class Index extends Component &#123;</span><br><span class="line">  constructor () &#123;</span><br><span class="line">    super(...arguments)</span><br><span class="line">    this.state = &#123;</span><br><span class="line">      title: &apos;首页&apos;,</span><br><span class="line">      list: [1, 2, 3]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  componentWillMount () &#123;&#125;</span><br><span class="line"></span><br><span class="line">  componentDidMount () &#123;&#125;</span><br><span class="line"></span><br><span class="line">  componentWillUpdate (nextProps, nextState) &#123;&#125;</span><br><span class="line"></span><br><span class="line">  componentDidUpdate (prevProps, prevState) &#123;&#125;</span><br><span class="line"></span><br><span class="line">  shouldComponentUpdate (nextProps, nextState) &#123;</span><br><span class="line">    return true</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  add = (e) =&gt; &#123;</span><br><span class="line">    // dosth</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render () &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;View className=&apos;index&apos;&gt;</span><br><span class="line">        &lt;View className=&apos;title&apos;&gt;&#123;this.state.title&#125;&lt;/View&gt;</span><br><span class="line">        &lt;View className=&apos;content&apos;&gt;</span><br><span class="line">          &#123;this.state.list.map(item =&gt; &#123;</span><br><span class="line">            return (</span><br><span class="line">              &lt;View className=&apos;item&apos;&gt;&#123;item&#125;&lt;/View&gt;</span><br><span class="line">            )</span><br><span class="line">          &#125;)&#125;</span><br><span class="line">          &lt;Button className=&apos;add&apos; onClick=&#123;this.add&#125;&gt;添加&lt;/Button&gt;</span><br><span class="line">        &lt;/View&gt;</span><br><span class="line">      &lt;/View&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>###Dva 概念</p>
+<p><strong>数据流向</strong></p>
+<p>数据的改变发生通常是通过用户交互行为或者浏览器行为（如路由跳转等）触发的，当此类行为会改变数据的时候可以通过 <code>dispatch</code> 发起一个 action，如果是同步行为会直接通过 <code>Reducers</code> 改变 <code>State</code>，如果是异步行为（副作用）会先触发 <code>Effects</code> 然后流向 <code>Reducers</code> 最终改变 <code>State</code>，所以在 dva 中，数据流向非常清晰简明，并且思路基本跟开源社区保持一致（也是来自于开源社区）。</p>
+<p><img src="http://mapleSong.github.io/assets/articleImg/16/1.png" alt=""></p>
+<h3 id="项目运行"><a href="#项目运行" class="headerlink" title="项目运行"></a>项目运行</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g @tarojs/cli</span><br><span class="line">$ taro init myApp</span><br><span class="line">$ npm run dev:weapp</span><br><span class="line"></span><br><span class="line">$ npm install dva-cli -g</span><br><span class="line">$ npm i dva-core dva-loading --save</span><br></pre></td></tr></table></figure>
+<h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">├── .temp                  </span><br><span class="line">├── .rn_temp              </span><br><span class="line">├── dist                  </span><br><span class="line">├── config                 // Taro配置目录</span><br><span class="line">│   ├── dev.js                 // 开发时配置</span><br><span class="line">│   ├── index.js               // 默认配置</span><br><span class="line">│   └── prod.js                // 打包时配置</span><br><span class="line">├── static                 // 静态文件</span><br><span class="line">├── src                    // 源码目录</span><br><span class="line">│   ├── components             // 组件</span><br><span class="line">│   ├── models                 // redux models</span><br><span class="line">│   │   └── common.js		   </span><br><span class="line">│   │   └── index.js		   </span><br><span class="line">│   ├── pages                  // 页面文件目录</span><br><span class="line">│   │   └── home</span><br><span class="line">│   │       ├── index.js           // 页面逻辑</span><br><span class="line">│   │       ├── index.scss         // 页面样式</span><br><span class="line">│   │       ├── model.js           // 页面models</span><br><span class="line">│   │       └── service.js         // 页面api</span><br><span class="line">│   ├── styles            </span><br><span class="line">│   ├── utils  </span><br><span class="line">│   │   └── dva.js		   //dva配置</span><br><span class="line">│   │   └── request.js	   //网络请求封装</span><br><span class="line">│   ├── app.js             // 入口文件</span><br><span class="line">│   └── index.html</span><br><span class="line">├── package.json</span><br></pre></td></tr></table></figure>
+<p><strong>dav配置</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">dva.js</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> Taro <span class="keyword">from</span> <span class="string">'@tarojs/taro'</span>;	</span><br><span class="line"><span class="keyword">import</span> &#123; create &#125; <span class="keyword">from</span> <span class="string">'dva-core'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; createLogger &#125; <span class="keyword">from</span> <span class="string">'redux-logger'</span>;</span><br><span class="line"><span class="keyword">import</span> createLoading <span class="keyword">from</span> <span class="string">'dva-loading'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> app;</span><br><span class="line"><span class="keyword">let</span> store;</span><br><span class="line"><span class="keyword">let</span> dispatch;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createApp</span>(<span class="params">opt</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// redux日志</span></span><br><span class="line">  <span class="comment">// opt.onAction = [createLogger()];</span></span><br><span class="line">  app = create(opt);</span><br><span class="line">  app.use(createLoading(&#123;&#125;));</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 适配支付宝小程序</span></span><br><span class="line">  <span class="keyword">if</span> (Taro.getEnv() === Taro.ENV_TYPE.ALIPAY) &#123;</span><br><span class="line">    global = &#123;&#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (!global.registered) opt.models.forEach(<span class="function"><span class="params">model</span> =&gt;</span> app.model(model));</span><br><span class="line">  global.registered = <span class="literal">true</span>;</span><br><span class="line">  app.start();</span><br><span class="line"></span><br><span class="line">  store = app._store;</span><br><span class="line">  app.getStore = <span class="function"><span class="params">()</span> =&gt;</span> store;</span><br><span class="line"></span><br><span class="line">  dispatch = store.dispatch;</span><br><span class="line"></span><br><span class="line">  app.dispatch = dispatch;</span><br><span class="line">  <span class="keyword">return</span> app;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  createApp,</span><br><span class="line">  getDispatch() &#123;</span><br><span class="line">    <span class="keyword">return</span> app.dispatch;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>入口导入dva</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">app.js</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> dva <span class="keyword">from</span> <span class="string">'./utils/dva'</span></span><br><span class="line"><span class="keyword">const</span> dvaApp = dva.createApp(&#123;</span><br><span class="line">  initialState: &#123;&#125;,</span><br><span class="line">  models: models,</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">const</span> store = dvaApp.getStore();</span><br></pre></td></tr></table></figure>
+<p><strong>封装request</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> Taro <span class="keyword">from</span> <span class="string">'@tarojs/taro'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// const request_data = &#123;</span></span><br><span class="line"><span class="comment">//   platform: 'wap',</span></span><br><span class="line"><span class="comment">//   rent_mode: 2,</span></span><br><span class="line"><span class="comment">// &#125;;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> baseUrl = <span class="string">'https://xxxx.com/api/'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> (options = &#123; <span class="attr">method</span>: <span class="string">'GET'</span>, <span class="attr">data</span>: &#123;&#125; &#125;) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> Taro.request(&#123;</span><br><span class="line">    url: baseUrl + options.url,</span><br><span class="line">    data: &#123;</span><br><span class="line">      ...options.data</span><br><span class="line">    &#125;,</span><br><span class="line">    header: &#123;</span><br><span class="line">      <span class="string">'Content-Type'</span>: <span class="string">'application/json'</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    method: options.method.toUpperCase(),</span><br><span class="line">  &#125;).then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; statusCode, data &#125; = res;</span><br><span class="line">    <span class="keyword">if</span> (statusCode &gt;= <span class="number">200</span> &amp;&amp; statusCode &lt; <span class="number">300</span>) &#123;</span><br><span class="line">      <span class="keyword">if</span> (data.msg !== <span class="string">'success'</span>) &#123;</span><br><span class="line">        Taro.showToast(&#123;</span><br><span class="line">          title: <span class="string">`<span class="subst">$&#123;res.data.msg&#125;</span>~`</span> || res.data.code,</span><br><span class="line">          icon: <span class="string">'none'</span>,</span><br><span class="line">          mask: <span class="literal">true</span>,</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> data;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">`网络请求错误，状态码<span class="subst">$&#123;statusCode&#125;</span>`</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>创建page</strong></p>
+<p>用一个累加器的例子演示taro与dav的配合，通过请求接口返回值判断是否允许操作累加。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line">│   ├── pages                 </span><br><span class="line">│   │   └── home</span><br><span class="line">│   │       ├── index.js           </span><br><span class="line">│   │       ├── index.scss        </span><br><span class="line">│   │       ├── model.js          </span><br><span class="line">│   │       └── service.js  </span><br><span class="line"></span><br><span class="line">service.js</span><br><span class="line"></span><br><span class="line">import Request from &apos;../../utils/request&apos;</span><br><span class="line"></span><br><span class="line">export const optionAllow = data =&gt; Request(&#123;</span><br><span class="line">  url: &apos;xxx&apos;,</span><br><span class="line">  method: &apos;GET&apos;,</span><br><span class="line">  data</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">index.js</span><br><span class="line"></span><br><span class="line">import Taro, &#123; Component &#125; from &apos;@tarojs/taro&apos;</span><br><span class="line">import &#123; View, Button &#125; from &apos;@tarojs/components&apos;</span><br><span class="line">import &#123; connect &#125; from &apos;@tarojs/redux&apos;</span><br><span class="line">import * as lineApi from &apos;./server&apos;</span><br><span class="line"></span><br><span class="line">import &apos;./index.scss&apos;</span><br><span class="line"></span><br><span class="line">@connect((&#123; home &#125;) =&gt; (&#123;</span><br><span class="line">  ...home</span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line">export default class Home extends Component &#123;</span><br><span class="line">  config = &#123;</span><br><span class="line">    navigationBarTitleText: &apos;首页&apos;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  constructor() &#123;</span><br><span class="line">      super(...arguments)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  componentDidMount = () =&gt; &#123;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  handleAddButton()&#123;</span><br><span class="line">      this.props.dispatch(&#123;</span><br><span class="line">          type:&apos;home/handleAddNumber&apos;</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render()&#123;</span><br><span class="line">      const &#123; amount &#125; = this.props</span><br><span class="line">      return(</span><br><span class="line">          &lt;View&gt;</span><br><span class="line">              &lt;View&gt;总数：&#123; amount &#125;&lt;/View&gt;</span><br><span class="line">              &lt;Button onClick = &#123; this.handleAddButton &#125; &gt;+&lt;/Button&gt;</span><br><span class="line">          &lt;/View&gt;</span><br><span class="line">      )</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">model.js</span><br><span class="line"></span><br><span class="line">import * as homeApi from &apos;./server&apos;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">    namespace:&apos;home&apos;,</span><br><span class="line">    state:&#123;</span><br><span class="line">        amount:0,</span><br><span class="line">    &#125;,</span><br><span class="line">    </span><br><span class="line">    effects:&#123;</span><br><span class="line">        *handleAddNumber(_,&#123;call,put,select&#125;)&#123;</span><br><span class="line">    		const &#123; amount &#125; = yield select( state =&gt; state.home )</span><br><span class="line">    		const res = yield call(homeApi.optionAllow,&#123;status:&apos;add&apos;&#125;)</span><br><span class="line">            if(!res.data) return</span><br><span class="line">            yield put(&#123;</span><br><span class="line">                type:&apos;save&apos;,</span><br><span class="line">                payload:&#123;</span><br><span class="line">                    amount: amount + 1</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br><span class="line">		&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">        </span><br><span class="line">    reducers:&#123;</span><br><span class="line">        save(state, &#123; payload &#125;)&#123;</span><br><span class="line">            return &#123; ...state, ...payload &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://vcodes.me/2019/01/07/Taro + Dva 实战小结/" data-id="cjrfzdhue0000nytz8a5iztu7"
+         class="article-share-link">分享</a>
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Dva/">Dva</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Taro/">Taro</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+    
+  <nav class="article-nav">
+    
+    
+      <a href="/2018/06/10/Vue按需加载ECharts模块/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">Vue按需加载ECharts模块</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+    
+  
+
+</article>
+
+
+
+</section>
+  <footer class="footer">
+  
+  <div class="outer">
+    <ul class="list-inline">
+      <li>&copy; 2017 Asimov</li>
+      <!-- <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li> -->
+      <!-- <li>Theme  <a href="https://zhwangart.github.io">zhwangart</a></li> -->
+      <!--
+      <li><a href="/">Asimov</a></li>
+      -->
+    </ul>
+  </div>
+</footer>
+
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/"><img src="/logo.png" alt="Asimov"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/">主页</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/archives">归档</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/gallery">相册</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/about">关于</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+        <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+          <i class="fe fe-feed"></i>
+        </a>
+      
+    </li>
+  </ul>
+</nav>
+
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+</aside>
+  <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/lazyload.min.js"></script>
+
+
+  <script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+  <script src="/js/search.js"></script>
+
+
+<script src="/js/ocean.js"></script>
+
+<!-- <script src="/js/canvas-nest.js"></script> -->
+
+</body>
+</html>
