@@ -1,0 +1,14 @@
+{
+    "background_color": "purple",
+    "display": "fullscreen",
+    "icons": [
+      {
+        "src": "icon_backtop.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ],
+    "name": "xx快捷版",
+    "short_name": "快",
+    "start_url": "."
+  }
