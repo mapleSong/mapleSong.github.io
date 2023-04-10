@@ -4,12 +4,12 @@
   "display": "minimal-ui",
   "icons": [
     {
-      "src": "icon/fox-icon.png",
-      "sizes": "192x192",
+      "src": "icon/logo.png",
+      "sizes": "71x72",
       "type": "image/png"
     }
   ],
-  "name": "Awesome fox pictures",
-  "short_name": "Foxes",
+  "name": "360小游戏中心",
+  "short_name": "Fun360",
   "start_url": "/pwa-examples/a2hs/index.html"
 }
