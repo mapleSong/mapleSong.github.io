@@ -7,7 +7,7 @@ addBtn.style.display = 'none';
 // 我们可以设置一个空的 serviceWorker
 if('serviceWorker' in navigator) {
   navigator.serviceWorker
-           .register('./sw2.js')
+           .register('https://maplesong.github.io/pwa-examples/a2hs/sw2.js')
            .then(function() { console.log('Service Worker Registered'); });
 }
 
